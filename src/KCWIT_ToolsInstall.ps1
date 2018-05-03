@@ -42,10 +42,6 @@ function Main {
     Install-Atom -AtomUri $Config.AtomUri
     Install-Git -Config $Config.GitUri
     
-    if ($IsWindows) {
-        Install-GitDesktop -GitDesktopUri $Config.GitDesktopUri
-    }
-    
     Write-Verbose -Message 'Installation is complete.'
 }
 #endregion
@@ -204,19 +200,6 @@ function Install-Atom {
     )
     
     #TODO: Atom install
-}
-
-#endregion
-
-
-#region Install-GitDesktop
-function Install-GitDesktop {
-    param
-    (
-        [string]$GitDesktopUri
-    )
-    
-    #TODO: Git Desktop install
 }
 
 #endregion

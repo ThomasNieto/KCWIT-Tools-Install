@@ -29,7 +29,6 @@
           <S N="NodeJsUri">https://nodejs.org/dist/v10.0.0/node-v10.0.0-x64.msi</S>
           <S N="ChromeUri">https://dl.google.com/edgedl/chrome/install/GoogleChromeStandaloneEnterprise64.msi</S>
           <S N="GitUri">https://github.com/git-for-windows/git/releases/download/v2.17.0.windows.1/Git-2.17.0-64-bit.exe</S>
-          <S N="GitDesktopUri">https://central.github.com/deployments/desktop/desktop/latest/win32?format=msi</S>
           <S N="AtomUri">https://github.com/atom/atom/releases/download/v1.26.1/AtomSetup.exe</S>
         </MS>
       </Obj>
@@ -42,7 +41,6 @@
           <S N="NodeJsUri">https://nodejs.org/dist/v10.0.0/node-v10.0.0-x86.msi</S>
           <S N="ChromeUri">https://dl.google.com/edgedl/chrome/install/GoogleChromeStandaloneEnterprise.msi</S>
           <S N="GitUri">https://github.com/git-for-windows/git/releases/download/v2.17.0.windows.1/Git-2.17.0-32-bit.exe</S>
-          <S N="GitDesktopUri">https://central.github.com/deployments/desktop/desktop/latest/win32?format=msi</S>
           <S N="AtomUri">https://github.com/atom/atom/releases/download/v1.26.1/AtomSetup.exe</S>
         </MS>
       </Obj>
