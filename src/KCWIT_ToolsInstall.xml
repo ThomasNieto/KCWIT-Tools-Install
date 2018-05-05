@@ -1,40 +1,52 @@
 <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
   <Obj RefId="0">
     <TN RefId="0">
-      <T>Deserialized.System.Management.Automation.PSObject</T>
-      <T>Deserialized.System.Object</T>
+      <T>System.Object[]</T>
+      <T>System.Array</T>
+      <T>System.Object</T>
     </TN>
-    <MS>
-      <S N="OperatingSystem">MacOS</S>
-      <S N="PSCoreUri">https://github.com/PowerShell/PowerShell/releases/download/v6.0.2/powershell-6.0.2-osx.10.12-x64.pkg</S>
-      <S N="NodeJsUri">https://nodejs.org/dist/v10.0.0/node-v10.0.0.pkg</S>
-      <S N="ChromeUri">https://dl.google.com/chrome/mac/stable/googlechrome.dmg</S>
-      <S N="GitUri">https://raw.githubusercontent.com/Homebrew/install/master/install</S>
-      <S N="AtomUri">https://github.com/atom/atom/releases/download/v1.26.1/atom-mac.zip</S>
-    </MS>
-  </Obj>
-  <Obj RefId="1">
-    <TNRef RefId="0" />
-    <MS>
-      <S N="OperatingSystem">Windows</S>
-      <S N="OSArchitecture">64-bit</S>
-      <S N="PSCoreUri">https://github.com/PowerShell/PowerShell/releases/download/v6.0.2/PowerShell-6.0.2-win-x64.msi</S>
-      <S N="NodeJsUri">https://nodejs.org/dist/v10.0.0/node-v10.0.0-x64.msi</S>
-      <S N="ChromeUri">https://dl.google.com/edgedl/chrome/install/GoogleChromeStandaloneEnterprise64.msi</S>
-      <S N="GitUri">https://github.com/git-for-windows/git/releases/download/v2.17.0.windows.1/Git-2.17.0-64-bit.exe</S>
-      <S N="AtomUri">https://github.com/atom/atom/releases/download/v1.26.1/AtomSetup.exe</S>
-    </MS>
-  </Obj>
-  <Obj RefId="2">
-    <TNRef RefId="0" />
-    <MS>
-      <S N="OperatingSystem">Windows</S>
-      <S N="OSArchitecture">32-bit</S>
-      <S N="PSCoreUri">https://github.com/PowerShell/PowerShell/releases/download/v6.0.2/PowerShell-6.0.2-win-x86.msi</S>
-      <S N="NodeJsUri">https://nodejs.org/dist/v10.0.0/node-v10.0.0-x86.msi</S>
-      <S N="ChromeUri">https://dl.google.com/edgedl/chrome/install/GoogleChromeStandaloneEnterprise.msi</S>
-      <S N="GitUri">https://github.com/git-for-windows/git/releases/download/v2.17.0.windows.1/Git-2.17.0-32-bit.exe</S>
-      <S N="AtomUri">https://github.com/atom/atom/releases/download/v1.26.1/AtomSetup.exe</S>
-    </MS>
+    <LST>
+      <Obj RefId="1">
+        <TN RefId="1">
+          <T>Deserialized.System.Management.Automation.PSObject</T>
+          <T>Deserialized.System.Object</T>
+        </TN>
+        <MS>
+          <S N="OperatingSystem">MacOS</S>
+          <S N="PSCoreUri">https://github.com/PowerShell/PowerShell/releases/download/v6.0.2/powershell-6.0.2-osx.10.12-x64.pkg</S>
+          <S N="NodeJsUri">https://nodejs.org/dist/v10.0.0/node-v10.0.0.pkg</S>
+          <S N="ChromeUri">https://dl.google.com/chrome/mac/stable/googlechrome.dmg</S>
+          <S N="GitUri">https://raw.githubusercontent.com/Homebrew/install/master/install</S>
+          <S N="AtomUri">https://github.com/atom/atom/releases/download/v1.26.1/atom-mac.zip</S>
+          <S N="GitKrakenUri">https://release.gitkraken.com/darwin/installGitKraken.dmg</S>
+        </MS>
+      </Obj>
+      <Obj RefId="2">
+        <TNRef RefId="1" />
+        <MS>
+          <S N="OperatingSystem">Windows</S>
+          <S N="OSArchitecture">64-bit</S>
+          <S N="PSCoreUri">https://github.com/PowerShell/PowerShell/releases/download/v6.0.2/PowerShell-6.0.2-win-x64.msi</S>
+          <S N="NodeJsUri">https://nodejs.org/dist/v10.0.0/node-v10.0.0-x64.msi</S>
+          <S N="ChromeUri">https://dl.google.com/edgedl/chrome/install/GoogleChromeStandaloneEnterprise64.msi</S>
+          <S N="GitUri">https://github.com/git-for-windows/git/releases/download/v2.17.0.windows.1/Git-2.17.0-64-bit.exe</S>
+          <S N="AtomUri">https://github.com/atom/atom/releases/download/v1.26.1/AtomSetup-x64.exe</S>
+          <S N="GitKrakenUri">https://release.gitkraken.com/win64/GitKrakenSetup.exe</S>
+        </MS>
+      </Obj>
+      <Obj RefId="3">
+        <TNRef RefId="1" />
+        <MS>
+          <S N="OperatingSystem">Windows</S>
+          <S N="OSArchitecture">32-bit</S>
+          <S N="PSCoreUri">https://github.com/PowerShell/PowerShell/releases/download/v6.0.2/PowerShell-6.0.2-win-x86.msi</S>
+          <S N="NodeJsUri">https://nodejs.org/dist/v10.0.0/node-v10.0.0-x86.msi</S>
+          <S N="ChromeUri">https://dl.google.com/edgedl/chrome/install/GoogleChromeStandaloneEnterprise.msi</S>
+          <S N="GitUri">https://github.com/git-for-windows/git/releases/download/v2.17.0.windows.1/Git-2.17.0-32-bit.exe</S>
+          <S N="AtomUri">https://github.com/atom/atom/releases/download/v1.26.1/AtomSetup.exe</S>
+          <S N="GitKrakenUri">https://release.gitkraken.com/win32/GitKrakenSetup.exe</S>
+        </MS>
+      </Obj>
+    </LST>
   </Obj>
 </Objs>
