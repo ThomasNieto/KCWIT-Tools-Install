@@ -59,7 +59,7 @@ The following software is installed with the script.
     curl -fsSL https://raw.githubusercontent.com/tnieto88/KCWIT-Tools-Install/rapid-development/src/CaC_ToolsInstall.sh | sh
     ```
 
-3. You may be prompted for your password. Please enter your password to continue installation.
+3. If you are prompted for your password please type it and press <kbd>Enter</kbd> to continue.
 
 4. If there are any errors or warnings please get a hold of a mentor for help.
 
