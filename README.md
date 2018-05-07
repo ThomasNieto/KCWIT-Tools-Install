@@ -1,6 +1,6 @@
 # Kansas City Women in Technology Tools Install
 
-Tools Install is a cross-platform (Windows and MacOS) software installation script to assist Coding & Cocktails attendees install their software automatically. Windows uses [Chocolatey](https://chocolatey.org) for the application package manager while MacOS uses [Homebrew](https://brew.sh/) and [Homebrew Cask](https://caskroom.github.io/).
+Tools Install is a cross-platform (Windows and MacOS) software installation script to assist Coding & Cocktails attendees install their software automatically. Package managers are used to install applications [Chocolatey](https://chocolatey.org) for Windows uses and [Homebrew](https://brew.sh/) and [Homebrew Cask](https://caskroom.github.io/) for MacOS.
 
 ## Software Installed
 
@@ -38,7 +38,7 @@ The following software is installed with the script.
     ```powershell
     Start-Process -FilePath powershell.exe -ArgumentList "Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" -Verb RunAs
 
-    Start-Process -FilePath powershell.exe -ArgumentList "Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://github.com/tnieto88/KCWIT-Tools-Install/blob/master/src/CaC_ToolsInstall.ps1')" -Verb RunAs
+    Start-Process -FilePath powershell.exe -ArgumentList "Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/tnieto88/KCWIT-Tools-Install/rapid-development/src/CaC_ToolsInstall.ps1')" -Verb RunAs
 
     Set-ExecutionPolicy -ExecutionPolicy AllSigned -Force
     ```
@@ -56,7 +56,7 @@ The following software is installed with the script.
 2. Copy and Paste the following commands in `Terminal` and press <kbd>Enter</kbd>:
     
     ```shell
-    curl -fsSL https://github.com/tnieto88/KCWIT-Tools-Install/blob/master/src/CaC_ToolsInstall.sh | sh
+    curl -fsSL https://raw.githubusercontent.com/tnieto88/KCWIT-Tools-Install/rapid-development/src/CaC_ToolsInstall.sh | sh
     ```
 
 3. You may be prompted for your password. Please enter your password to continue installation.
