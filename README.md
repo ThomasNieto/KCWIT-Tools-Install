@@ -1,10 +1,8 @@
 # Kansas City Women in Technology Tools Install
 
-Tools Install is a cross-platform (Windows and MacOS) software installation script to assist Coding & Cocktails attendees install their software automatically. Package managers are used to install applications [Chocolatey](https://chocolatey.org) for Windows uses and [Homebrew](https://brew.sh/) and [Homebrew Cask](https://caskroom.github.io/) for MacOS.
+Tools Install is a cross-platform (Windows and MacOS) software installation script to assist Coding & Cocktails attendees install their software automatically. Package managers are used to install applications, [Chocolatey](https://chocolatey.org) for Windows uses and [Homebrew](https://brew.sh/)/[Homebrew Cask](https://caskroom.github.io/) for MacOS.
 
 ## Software Installed
-
-The following software is installed with the script.
 
 ### All
 
