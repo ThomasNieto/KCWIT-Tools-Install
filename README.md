@@ -6,12 +6,22 @@ Tools Install is a cross-platform (Windows and MacOS) software installation scri
 
 The following software is installed with the script.
 
-* [PowerShell Core 6](https://github.com/PowerShell/PowerShell)
+### All
+
 * [Google Chrome](https://www.google.com/chrome/)
 * [Node.Js](https://nodejs.org/en/)
 * [Git](https://git-scm.com/)
 * [Atom](https://atom.io/)
 * [GitKraken](https://www.gitkraken.com/)
+
+### Windows
+
+* [Chocolatey GUI](https://chocolatey.org/packages/ChocolateyGUI)
+* [Cmder](http://cmder.net/)
+
+### MacOS
+
+* [CakeBrew](https://www.cakebrew.com/)
 
 ## Installation Steps
 
