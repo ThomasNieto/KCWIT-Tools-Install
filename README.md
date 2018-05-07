@@ -1,6 +1,6 @@
 # Kansas City Women in Technology Tools Install
 
-Tools Install is a cross-platform (Windows and MacOS) software installation script to assist Coding & Cocktails attendees install their software automatically.
+Tools Install is a cross-platform (Windows and MacOS) software installation script to assist Coding & Cocktails attendees install their software automatically. Windows uses [Chocolatey](https://chocolatey.org) for the application package manager while MacOS uses [HomeBrew](https://brew.sh/) and [HomeBrew Cask](https://caskroom.github.io/).
 
 ## Software Installed
 
@@ -18,7 +18,7 @@ The following software is installed with the script.
 ### Windows
 
 1. Press <kbd>Windows logo key</kbd>+<kbd>R</kbd> on your keyboard.
-    1. Type `PowerShell.exe`
+    1. Type `powershell.exe`
     2. Press <kbd>Enter</kbd>
 
 2. Copy and Paste the following commands in `PowerShell` and press <kbd>Enter</kbd>:
@@ -26,16 +26,18 @@ The following software is installed with the script.
     Note: After pasting the commands below, a User Account Control window may appear mulitple times with a message saying `Do you want to run this application to make changes to your device?` Click <kbd>Yes</kbd>
     
     ```powershell
-    $ToolsUrl = 'https://github.com/tnieto88/KCWIT-Tools-Install/blob/master/src/KCWIT_ToolsInstall.ps1'
-    $ScriptPath = "$($Env:TEMP)\KCWIT_ToolsInstall.ps1"
-    $WebClient = New-Object -TypeName System.Net.WebClient
-    $WebClient.DownloadFile($ToolsUrl, ScriptPath)
-    Start-Process -FilePath powershell.exe -ArgumentList "-File $ScriptPath -Verbose" -Verb RunAs
+    Start-Process -FilePath powershell.exe -ArgumentList "Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" -Verb RunAs
+
+    Start-Process -FilePath powershell.exe -ArgumentList "Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://github.com/tnieto88/KCWIT-Tools-Install/blob/master/src/CaC_ToolsInstall.ps1')" -Verb RunAs
+
+    Set-ExecutionPolicy -ExecutionPolicy AllSigned -Force
     ```
 
-3. The script will download and install the various required applications. It may take some time to complete. Please be patient.
+4. The script will download and install the various required applications. It may take some time to complete. Please be patient.
 
-4. If there are any errors or warnings please get a hold of a mentor for help.
+5. If there are any errors or warnings please get a hold of a mentor for help.
+
+6. To view, update, install, or reinstall packages start 
 
 ### MacOS
 
@@ -44,15 +46,9 @@ The following software is installed with the script.
 2. Copy and Paste the following commands in `Terminal` and press <kbd>Enter</kbd>:
     
     ```shell
-    ScriptUrl=https://github.com/tnieto88/KCWIT-Tools-Install/blob/master/src/PSCoreInstall.sh
-    ScriptName=PSCoreInstall.sh
-    TMP=/tmp
-    ScriptPath=$TMP/$ScriptName
-    wget $ScriptUrl -P $TMP
-    chmod +x $ScriptPath
-    $ScriptPath
+    curl -fsSL https://github.com/tnieto88/KCWIT-Tools-Install/blob/master/src/CaC_ToolsInstall.sh | sh
     ```
 
-3. The script will download and install `PowerShell Core` if not already installed then install the various required applications. It may take some time to complete. Please be patient.
+3. You may be prompted for your password. Please enter your password to continue installation.
 
 4. If there are any errors or warnings please get a hold of a mentor for help.

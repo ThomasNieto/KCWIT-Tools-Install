@@ -34,6 +34,8 @@ function Main {
     elseif ($IsMacOS) {
         $Config = $Config |
         Where-Object { $_.OperatingSystem -eq 'MacOS' }
+        
+        Install-Homebrew
     }
     
     Install-Chrome -ChromeUri $Config.ChromeUri
@@ -88,7 +90,7 @@ function Install-PSCore {
         Write-Warning -Message 'Msiexec installer failed.'
     }
     
-    if ($LASTEXITCODE -eq 0) {
+    if ($ExitCode -eq 0) {
         Write-Verbose -Message 'PowerShell Core successfully installed.'
     }
     else {
@@ -134,7 +136,48 @@ function Install-Chrome {
         }
     }
     elseif ($IsMacOS) {
-        #TODO: MacOS install
+        if (Get-ChildItem -Path / -Filter "*Chrome.app" -Recurse) {
+            Write-Verbose -Message 'Google Chome already installed.'
+        }
+        else {
+            Write-Verbose -Message 'Installing Google Chrome.'
+            
+            & brew cask install google-chrome
+            
+            if (Get-ChildItem -Path / -Filter "*Chrome.app" -Recurse) {
+                Write-Verbose -Message 'Google Chrome already installed.'
+            }
+            else {
+                Write-Warning -Message 'Google Chrome install failed.'
+            }
+        }
+    }
+}
+#endregion
+
+
+#region Install-Homebrew
+function Install-Homebrew {
+    if ($IsMacOS) {
+        Write-Verbose -Message 'Installing Homebrew'
+        
+        if (-not (Get-Command -Name brew)) {
+            & usr/bin/ruby -e '$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)'
+        }
+        
+        & brew update
+        $Result = & brew doctor
+        
+        if ($Result -eq 'Your system is ready to brew') {
+            Write-Verbose -Message 'Homebrew successfully installed.'
+        }
+        else {
+            Write-Verbose -Message 'Homebrew failed to install.'
+            exit 1
+        }
+        
+        & brew install 'wget'
+        & brew tap caskroom/cask
     }
 }
 #endregion
@@ -174,7 +217,7 @@ function Install-Git {
         }
     }
     elseif ($IsMacOS) {
-        #TODO: MacOS install
+        & brew install git
     }
 }
 #endregion
@@ -217,7 +260,7 @@ function Install-NodeJs {
         }
     }
     elseif ($IsMacOS) {
-        #TODO: MacOS install
+        & brew install node
     }
 }
 #endregion
@@ -225,12 +268,22 @@ function Install-NodeJs {
 
 #region Update-Npm
 function Update-Npm {
-    Write-Verbose -Message 'Updating npm.'
-    
-    & "$($env:ProgramFiles)\nodejs\npm.cmd" install npm -g
-    [version]$NpmVersion = & "$($env:ProgramFiles)\nodejs\npm.cmd" --version
-    
-    Write-Verbose -Message "Updated npm to version: $NpmVersion"
+    if ($IsWindows) {
+        Write-Verbose -Message 'Updating npm.'
+        
+        & "$($env:ProgramFiles)\nodejs\npm.cmd" install npm -g
+        [version]$NpmVersion = & "$($env:ProgramFiles)\nodejs\npm.cmd" --version
+        
+        Write-Verbose -Message "Updated npm to version: $NpmVersion"
+    }
+    elseif ($IsMacOS) {
+        Write-Verbose -Message 'Updating npm.'
+        
+        & npm install npm -g
+        [version]$NpmVersion = & npm --version
+        
+        Write-Verbose -Message "Updated npm to version: $NpmVersion"
+    }
 }
 #endregion
 
@@ -270,7 +323,7 @@ function Install-Atom {
         }
     }
     elseif ($IsMacOS) {
-        #TODO: MacOS install
+        & brew cask install atom
     }
 }
 #endregion
@@ -311,7 +364,7 @@ function Install-GitKraken {
         }
     }
     elseif ($IsMacOS) {
-        #TODO: MacOS install
+        & brew cask install gitkraken
     }
 }
 #endregion
