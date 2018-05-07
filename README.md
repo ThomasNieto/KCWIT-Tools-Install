@@ -63,4 +63,4 @@ The following software is installed with the script.
 
 4. If there are any errors or warnings please get a hold of a mentor for help.
 
-5. To view, update, install, or reinstall packages start `Cakebrew` from the `Applications`.
+5. To view, update, install, or reinstall packages start `Cakebrew` from `Applications`.
