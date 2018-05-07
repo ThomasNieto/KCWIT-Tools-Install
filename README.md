@@ -1,6 +1,6 @@
 # Kansas City Women in Technology Tools Install
 
-Tools Install is a cross-platform (Windows and MacOS) software installation script to assist Coding & Cocktails attendees install their software automatically. Windows uses [Chocolatey](https://chocolatey.org) for the application package manager while MacOS uses [HomeBrew](https://brew.sh/) and [HomeBrew Cask](https://caskroom.github.io/).
+Tools Install is a cross-platform (Windows and MacOS) software installation script to assist Coding & Cocktails attendees install their software automatically. Windows uses [Chocolatey](https://chocolatey.org) for the application package manager while MacOS uses [Homebrew](https://brew.sh/) and [Homebrew Cask](https://caskroom.github.io/).
 
 ## Software Installed
 
@@ -21,7 +21,7 @@ The following software is installed with the script.
 
 ### MacOS
 
-* [CakeBrew](https://www.cakebrew.com/)
+* [Cakebrew](https://www.cakebrew.com/)
 
 ## Installation Steps
 
@@ -43,11 +43,11 @@ The following software is installed with the script.
     Set-ExecutionPolicy -ExecutionPolicy AllSigned -Force
     ```
 
-4. The script will download and install the various required applications. It may take some time to complete. Please be patient.
+3. The script will download and install the various required applications. It may take some time to complete. Please be patient.
 
-5. If there are any errors or warnings please get a hold of a mentor for help.
+4. If there are any errors or warnings please get a hold of a mentor for help.
 
-6. To view, update, install, or reinstall packages start 
+5. To view, update, install, or reinstall packages start `Chocolatey GUI` from the `Start` menu.
 
 ### MacOS
 
@@ -62,3 +62,5 @@ The following software is installed with the script.
 3. You may be prompted for your password. Please enter your password to continue installation.
 
 4. If there are any errors or warnings please get a hold of a mentor for help.
+
+5. To view, update, install, or reinstall packages start `Cakebrew` from the `Applications`.
