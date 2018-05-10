@@ -48,7 +48,7 @@ Tools Install is a cross-platform (Windows and MacOS) software installation scri
    
    Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
-   Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/tnieto88/KCWIT-Tools-Install/rapid-development/src/CaC_ToolsInstall.ps1'))
+   Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/tnieto88/KCWIT-Tools-Install/master/src/CaC_ToolsInstall.ps1'))
     ```
 
 1. The script will download and install the various required applications. It may take some time to complete. Please be patient.
@@ -64,7 +64,7 @@ Tools Install is a cross-platform (Windows and MacOS) software installation scri
 1. Copy and Paste the following commands in `Terminal` and press <kbd>Enter</kbd>:
     
     ```shell
-    curl -fsSL https://raw.githubusercontent.com/tnieto88/KCWIT-Tools-Install/rapid-development/src/CaC_ToolsInstall.sh | sh
+    curl -fsSL https://raw.githubusercontent.com/tnieto88/KCWIT-Tools-Install/master/src/CaC_ToolsInstall.sh | sh
     ```
 
 1. If you are prompted for your password please type it and press <kbd>Enter</kbd> to continue.
